@@ -1,6 +1,6 @@
 import requests
 import allure
-from GLH import base_api, token
+from GLH import base_url_API as base_api, token
 
 
 class TodoistStore:

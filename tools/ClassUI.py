@@ -2,14 +2,12 @@ import allure
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-
+from GLH import base_url_UI
 
 class UIStore:
     def __init__(self, driver):
         self.driver = driver
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(10)
-        self.base_url = 'https://app.todoist.com/'
+        self.base_url = base_url_UI
 
     @allure.step("Авторизация пользователя {login} в системе")
     def login(self, login, password):
